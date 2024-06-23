@@ -9,12 +9,12 @@ import Posts from './Posts';
 function App() {
     return (
     <div className="App">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Main />}></Route>
-            <Route path="/page" element={<Page />}></Route>
-            <Route path="/posts" element={<Posts />}></Route>
-            <Route path="/posts/:name" element={<Posts />}></Route>
+            <Route path={process.env.PUBLIC_URL + '/'} element={<Main />}></Route>
+            <Route path={process.env.PUBLIC_URL + "/page"} element={<Page />}></Route>
+            <Route path={process.env.PUBLIC_URL + "/posts"} element={<Posts />}></Route>
+            <Route path={process.env.PUBLIC_URL +"/posts/:name"} element={<Posts />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

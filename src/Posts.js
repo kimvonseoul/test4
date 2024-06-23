@@ -12,7 +12,7 @@ const Posts = () => {
         <div>
             <div>{id.name}</div>
             <DB id={id.name}/>
-            <Link to='/page'>홈으로</Link>
+            <Link to={process.env.PUBLIC_URL +'/page'}>홈으로</Link>
         </div>
     );
 }
