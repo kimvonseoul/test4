@@ -9,7 +9,7 @@ import Posts from './Posts';
 function App() {
     return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route path="/" element={<Main />}></Route>
             <Route path="/page" element={<Page />}></Route>
